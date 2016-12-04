@@ -1,0 +1,21 @@
+<div class="flex-row activity box-row-container">
+    <div class="flex-item flex-grow-1 align-left user-img-content">
+        <img ng-src="{{activity.img}}">
+        <hr class="vertical-line" ng-if="!lastActivity"/>
+    </div>
+    <div class="flex-item flex-grow-6 align-left">
+        <div class="flex-column align-left">
+            <div class="flex-item align-left small-font">
+                <div>
+                    {{activity.name}}
+                    <span class="activity-gray-color">{{activity.subject}}</span>
+                    {{activity.project}}
+                </div>
+
+            </div>
+            <div class="flex-item align-left small-font activity-gray-color">
+                <i class="material-icons md-18">access_time</i> {{activity.time}}
+            </div>
+        </div>
+    </div>
+</div>

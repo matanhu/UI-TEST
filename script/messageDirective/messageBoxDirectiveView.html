@@ -1,0 +1,11 @@
+<div class="flex-column box-container">
+    <div class="flex-row border-bottom-box box-header-container">
+        <div class="flex-item align-left box-header">Messages</div>
+        <div class="flex-item align-right">
+            <div>
+                <span class="badge on-time-count" ng-if="unreadCount">{{unreadCount}}</span>
+            </div>
+        </div>
+    </div>
+    <mh-message message="message" ng-repeat="message in listMessages track by $index"></mh-message>
+</div>

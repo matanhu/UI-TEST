@@ -1,0 +1,16 @@
+.activity-gray-color{
+    color: #b3bbcc;
+}
+
+.vertical-line
+{
+    margin: auto;
+    margin-top: -10px;
+    width: 0px;
+    height: 100%;
+}
+
+.activity:hover{
+    cursor: pointer;
+    background-color: #d2d2d2;
+}

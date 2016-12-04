@@ -1,0 +1,13 @@
+<div class="flex-column box-container">
+    <div class="flex-row border-bottom-box box-header-container">
+        <div class="flex-item align-left box-header">Tasks</div>
+        <div class="flex-item align-right">
+            <div>
+                <span class="badge delay-count" ng-if="delaysCount">{{delaysCount}}</span>
+                <span class="badge on-time-count" ng-if="leftCount">{{leftCount}}</span>
+            </div>
+        </div>
+    </div>
+
+    <mh-task ng-repeat="task in listTasks track by $index" task="task"></mh-task>
+        </div>

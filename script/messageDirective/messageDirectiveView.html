@@ -1,0 +1,25 @@
+<div class="flex-row border-bottom-box message box-row-container"
+     ng-class="{'message-unread': message.unread}">
+    <div class="flex-item flex-grow-1 align-left user-img-content">
+        <img ng-src="{{message.img}}">
+    </div>
+    <div class="flex-item flex-grow-6 align-left">
+        <div class="flex-column align-left massage">
+            <div class="flex-item align-left small-font">
+                <div>
+                    <span class="name">{{message.name}}</span>
+                    <span class="time">{{message.time}}</span>
+                </div>
+
+                <span ng-if="message.message.length <= 41" class="text">{{message.message}}</span>
+                <span ng-if="message.message.length > 41" class="small-font">{{message.message.substring(0,41)}} (...)</span>
+            </div>
+            <div class="flex-item align-left">
+                <div class="font-icon">
+                    <i class="material-icons md-18">reply</i>
+                    <i class="material-icons md-18">settings</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+
+.small-font{
+    font-size: 12px;
+}
+
+.no-margin{
+    margin: 0px;
+}
+
+/*Message text style*/
+.message .name{
+    font-weight: bold;
+}
+
+.message .time{
+    color: #cbd1dc;
+}
+
+.message .unread{
+    background-color: #f4f5f8;
+}
+
+/*Settings and arrow icons style*/
+.font-icon {
+    color: #8492af;
+}
+
+.font-icon>i:hover {
+    cursor: pointer;
+    color: #f6f7fa;
+}
+
+.message:hover{
+    cursor: pointer;
+    background-color: #d2d2d2;
+}

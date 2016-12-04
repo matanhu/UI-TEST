@@ -1,0 +1,113 @@
+/*Style of container*/
+.container{
+    background: #f6f7fa;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Style of box container*/
+.boxes-container{
+    padding-right: 10px;
+    padding-top: 60px;
+}
+
+/*Set boxes directives as 100% height*/
+.box-container{
+    height: 100%;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+/*Margin between each flex item*/
+.flex-item{
+    margin: 10px;
+}
+
+/*Size of flex*/
+.flex-grow-0_5{
+    flex-grow: 0.5;
+}
+
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+.flex-grow-1_5{
+    flex-grow: 1.5;
+}
+
+.flex-grow-2{
+    flex-grow: 2;
+}
+
+.flex-grow-3{
+    flex-grow: 3;
+}
+
+.flex-grow-4{
+    flex-grow: 4;
+}
+
+.flex-grow-5{
+    flex-grow: 5;
+}
+
+.flex-grow-6{
+    flex-grow: 6;
+}
+
+.flex-grow-7{
+    flex-grow: 7;
+}
+
+.flex-grow-8{
+    flex-grow: 8;
+}
+
+.flex-grow-9{
+    flex-grow: 9;
+}
+
+/*Style of box*/
+.box{
+    background-color: #ffffff;
+    border: 1px solid #d4d9e3;
+}
+
+.img-box{
+    width: 100%;
+}
+
+.align-left
+{
+    text-align: left;
+}
+
+.align-right
+{
+    text-align: right;
+}
+
+/*Container style on small screen*/
+@media screen and (max-width: 700px){
+    /*Set flexbox as wrap*/
+    .flex-row{
+        flex-wrap: wrap;
+    }
+    /*Set each boxes as 100% width*/
+    .flex-item.mobile-full{
+        flex: 0 0 100%;
+    }
+}

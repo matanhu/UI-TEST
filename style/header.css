@@ -1,0 +1,41 @@
+/*Set header position and background color*/
+header{
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    padding-left: 200px;
+    min-width: 500px;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.material-icons{
+    vertical-align: middle;
+}
+
+/*Style of add project button*/
+#add-project-btn{
+    border: 0px;
+    background-color: #5584ff;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+/*Disable button focus style*/
+#add-project-btn:focus{
+    border: 0px;
+    outline-color: #fff;
+}
+
+/*Header style of small screen*/
+@media screen and (max-width: 700px){
+    header{
+        padding-left: 0px;
+    }
+}

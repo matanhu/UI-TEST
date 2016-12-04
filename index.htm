@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UI-TEST</title>
+
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="style/header.css"/>
+    <link rel="stylesheet" type="text/css" href="style/container.css"/>
+    <link rel="stylesheet" type="text/css" href="script/taskDirective/taskDirectiveStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="script/messageDirective/messageDirectiveStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="script/activityDirective/activityDirectiveStyle.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+<body ng-app="uiTest" ng-controller="mainController">
+<nav ng-class="{'nav-hide' : !menuDisplay}">
+    <div class="close-menu-btn" ng-click="menuDisplay = !menuDisplay">
+        <i class="material-icons">close</i>
+    </div>
+    <div id="logo-container">
+        <img id="logo" src="images/navbar-icons/logo.png">
+    </div>
+    <ul>
+        <li ng-repeat="button in listMenuButton">
+            <mh-menu-button icon="{{button.icon}}" name="{{button.name}}"></mh-menu-button>
+        </li>
+    </ul>
+</nav>
+<div class="fullPage" ng-class="{'menu-closed' : !menuDisplay}">
+    <header ng-class="{'menu-closed' : !menuDisplay}">
+        <div id="header-content" class="flex-row">
+            <div class="flex-item flex-row">
+            <div class="flex-item flex-grow-1 clickable" ng-click="menuDisplay = !menuDisplay">
+                <img class="arrow-menu" src="images/icons/left-arrow.png" ng-show="menuDisplay">
+                <img class="arrow-menu" src="images/icons/right-arrow.png" ng-show="!menuDisplay">
+                <i class="material-icons">menu</i>
+            </div>
+            <div class="search-input flex-item flex-grow-2">
+                <i class="material-icons">search</i><input type="text">
+            </div>
+            </div>
+            <div class="flex-item flex-row">
+            <div class="flex-item flex-grow-2">
+                <input id="add-project-btn" type="button" value="+ Add project" class="clickable">
+            </div>
+            <div class="flex-item flex-grow-1 clickable">
+                <i class="material-icons">email</i>
+            </div>
+            <div class="flex-item flex-grow-1 clickable">
+                <i class="material-icons">notifications</i>
+            </div>
+            <div class="flex-item flex-grow-1 clickable">
+                <img id="usr-img" src="images/user.png">
+            </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="flex-column boxes-container">
+            <div class="flex-row">
+                <h1>Hello John!</h1>
+            </div>
+            <div class="flex-row">
+                <div class="flex-item mobile-full flex-grow-1 box"><img class="img-box" src="images/boxes/sales.png">
+                </div>
+                <div class="flex-item mobile-full flex-grow-1_5 box"><img class="img-box" src="images/boxes/Report.png">
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="flex-item mobile-full box flex-grow-1">
+                    <mh-task-box class="box-container" list-tasks="listTasks"></mh-task-box>
+                </div>
+                <div class="flex-item mobile-full box flex-grow-1">
+                    <mh-message-box class="box-container" list-messages="listMessages"></mh-message-box>
+                </div>
+                <div class="flex-item mobile-full box flex-grow-1">
+                    <mh-activity-box class="box-container" list-activity="listActivity"></mh-activity-box>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+<script src="script/app.js"></script>
+<script src="script/menuButtonsDirective/menuButtonDirective.js"></script>
+<script src="script/taskDirective/taskDirective.js"></script>
+<script src="script/messageDirective/messageDirective.js"></script>
+<script src="script/activityDirective/activityDirective.js"></script>
+
+</body>
+</html>
+

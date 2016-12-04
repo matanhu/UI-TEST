@@ -1,0 +1,12 @@
+<div class="flex-column box-container">
+    <div class="flex-row border-bottom-box box-header-container">
+        <div class="flex-item align-left box-header">Activity</div>
+        <div class="flex-item align-right">
+            <div>
+                <span class="badge on-time-count">{{listActivity.length}}</span>
+            </div>
+        </div>
+    </div>
+    <mh-activity ng-repeat="activity in listActivity track by $index" activity="activity"
+                 last-activity="listActivity.length == $index + 1"></mh-activity>
+        </div>
