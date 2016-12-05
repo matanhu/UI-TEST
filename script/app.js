@@ -108,7 +108,10 @@ myApp.controller('mainController', function ($scope, $window) {
 
     }];
 
-
-
+    $scope.contact = {
+        name: 'Matan',
+        email: 'sd2ds.com',
+        img: 'images/user.png'
+    }
 
 });
